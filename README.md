@@ -18,7 +18,7 @@
 | Память | `src/civ_agents/memory/` (эпизодическая, семантическая BM25, рефлексия) |
 | Evals | `scripts/evals.py`, `scripts/eval_llm.py`, [`docs/evals_results.md`](docs/evals_results.md), [`docs/evals_llm.md`](docs/evals_llm.md) |
 | Observability | `src/civ_agents/observability/`, скриншоты в `docs/img/` |
-| Решения | `docs/adr/` |
+| Решения (ADR) | `docs/decisions/` |
 
 ## Запуск
 
