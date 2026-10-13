@@ -1,0 +1,24 @@
+# Окружение Python
+.venv/
+__pycache__/
+*.pyc
+
+# Секреты
+.env
+
+# Прогоны, логи, замеры
+runs/
+logs/
+
+# Кэши инструментов
+.pytest_cache/
+.ruff_cache/
+
+# Редакторы и система
+.vscode/
+.idea/
+.DS_Store
+
+# Результаты партий CivRealm
+game_scores/
+plot_game_scores/
