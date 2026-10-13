@@ -1,0 +1,31 @@
+llm:
+  active_profile: local
+  profiles:
+    local:
+      base_url: http://localhost:11434/v1
+      model: qwen3:4b-instruct
+      timeout_s: 60
+      max_output_tokens: 256
+      context_window: 8192
+    local_thinking:
+      base_url: http://localhost:11434/v1
+      model: qwen3:4b
+      timeout_s: 120
+      max_output_tokens: 1024
+      context_window: 8192
+
+game:
+  civrealm_config: configs/civrealm/baseline.yaml
+  max_turns: 50
+  username: myagent
+
+limits:
+  turn_time_budget_s: 60
+  max_llm_calls_per_turn: 10
+
+paths:
+  runs_dir: runs
+
+logging:
+  level: INFO
+  save_prompts: false
