@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.10,<3.11"
 dependencies = [
     "civrealm>=0.1.2",
+    "httpx>=0.28.1",
     "openai>=3.29.0",
     "pydantic>=2.14.1",
     "pydantic-settings>=2.15.0",
@@ -26,3 +27,7 @@ dev = [
     "pytest>=9.1.1",
     "ruff>=0.17.0",
 ]
+
+[tool.pytest.ini_options]
+markers = ["live: требует запущенную Ollama"]
+addopts = "-m 'not live'"
