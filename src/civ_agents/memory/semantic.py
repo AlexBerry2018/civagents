@@ -38,9 +38,11 @@ class KnowledgeBase:
         self._idf = {t: math.log(1 + (n - f + 0.5) / (f + 0.5)) for t, f in df.items()}
 
     @classmethod
-    def from_dir(cls, directory: str | Path) -> KnowledgeBase:
+    def from_dir(cls, *directories: str | Path) -> KnowledgeBase:
+        """Фрагменты из .md во всех указанных папках (база знаний и описания скиллов)."""
         chunks: list[Chunk] = []
-        for path in sorted(Path(directory).glob("*.md")):
+        paths = [p for d in directories if Path(d).is_dir() for p in sorted(Path(d).glob("*.md"))]
+        for path in paths:
             title, lines = path.stem, []
             for line in path.read_text(encoding="utf-8").splitlines():
                 if line.startswith("#"):
@@ -81,9 +83,9 @@ class KnowledgeBase:
 
 
 ROLE_QUERIES = {
-    "economist": "settlers found city site terrain food workers improve irrigation city build production",
-    "military": "explorer explore hut defense warriors fortify threat enemy",
-    "science": "research technology order bronze alphabet monarchy",
+    "economist": "skill city_site settlers found city site terrain food workers improve irrigation city build production",
+    "military": "skill assess_threat explorer explore hut defense warriors fortify threat enemy undefended",
+    "science": "skill research_plan research technology order bronze alphabet monarchy",
     "ruler": "strategy expansion rates science tax government monarchy lessons",
     "single": "strategy settlers city research explore lessons",
 }

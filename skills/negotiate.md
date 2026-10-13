@@ -1,3 +1,4 @@
-# Skill: negotiate (Провести переговоры) — запланирован
+# Skill negotiate — diplomacy (Провести переговоры), planned
 
-В первые 50 ходов контакта с соседями обычно нет (diplomatic_state = no contact), а действия дипломатии в каталоге пусты. Скилл описан, но не реализован: при появлении контакта советник дипломатии предлагал бы мир (peace) при сравнимой силе и не вступал бы в войну без защитников в городах.
+In the first 50 turns there is usually no contact with neighbours (diplomatic state "no contact") and diplomacy actions are empty, so this skill is described but not implemented.
+Planned rule: when contact appears, propose peace if our military strength is comparable; never start a war while our cities have no defenders.

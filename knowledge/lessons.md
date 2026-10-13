@@ -23,3 +23,13 @@
 - Focus on building early cities in a contiguous cluster to maximize growth and unit production within the first 50 turns.  
 - Prioritize research of Bronze Working early to enable faster unit production and technological advantage.  
 - Allocate early resources to expand and defend the initial city cluster to prevent early invasions or disruptions.
+
+## Lessons from game 20261013-140210-hierarchy-eb67 (2026-10-13)
+- Focus on early city development by settling adjacent plots to maximize early production and support growth.  
+- Prioritize advancing tech research immediately after founding the first city to unlock essential capabilities faster.  
+- Avoid overextending unit deployments in early turns—instead, use units for defense and resource gathering to ensure stability.
+
+## Lessons from game 20261013-140521-hierarchy-e1b6 (2026-10-13)
+- Prioritize early city foundation in fertile, strategic locations to maximize resource production and expansion potential.  
+- Begin research earlier to unlock key technologies sooner, especially in the early turns when game pace is fastest.  
+- Focus on building units for defense and exploration within the first 50 turns to secure territory and prevent early attacks.

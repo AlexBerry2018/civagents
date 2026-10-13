@@ -23,6 +23,7 @@ from civ_agents.observability.summary import load_calls, summarize
 
 logger = logging.getLogger(__name__)
 KNOWLEDGE_DIR = Path("knowledge")
+SKILLS_DIR = Path("skills")
 
 
 def play_game(
@@ -48,7 +49,7 @@ def play_game(
         llm.health()
         llm.warmup()
         episodic = EpisodicMemory(run.dir / "events.jsonl") if memory else None
-        knowledge = make_knowledge(KnowledgeBase.from_dir(KNOWLEDGE_DIR)) if memory else None
+        knowledge = make_knowledge(KnowledgeBase.from_dir(KNOWLEDGE_DIR, SKILLS_DIR)) if memory else None
         government = Government(llm, mode=mode, memory=episodic, knowledge=knowledge, use_skills=skills,
                                 turn_budget_s=settings.limits.turn_time_budget_s)
         alerts = AlertMonitor(government, settings.limits.turn_time_budget_s, run.dir / "alerts.jsonl")

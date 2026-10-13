@@ -32,5 +32,23 @@ services:
       - "127.0.0.1:3000:3000"
       - "127.0.0.1:4317:4317"
       - "127.0.0.1:4318:4318"
+
+  agent:
+    build: .
+    image: civ-agents:latest
+    profiles: ["agent"]
+    network_mode: host
+    depends_on: [ollama]
+    environment:
+      CIV_OTEL: "1"
+    volumes:
+      - ./runs:/app/runs
+      - ./knowledge:/app/knowledge
+    user: "1000:1000"
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    pids_limit: 512
+    mem_limit: 4g
+    cpus: 4
 volumes:
   ollama_models:

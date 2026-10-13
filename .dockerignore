@@ -1,0 +1,13 @@
+.venv
+.git
+runs
+game_scores
+plot_game_scores
+logs
+**/__pycache__
+.pytest_cache
+.ruff_cache
+.env
+*.log
+docs
+tests
