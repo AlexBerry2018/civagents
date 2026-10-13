@@ -26,6 +26,11 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
-
+  otel-lgtm:
+    image: grafana/otel-lgtm:latest
+    ports:
+      - "127.0.0.1:3000:3000"
+      - "127.0.0.1:4317:4317"
+      - "127.0.0.1:4318:4318"
 volumes:
   ollama_models:
