@@ -63,6 +63,8 @@ class GameSettings(_Section):
     civrealm_config: Path
     max_turns: int = Field(gt=0)
     username: str = Field(min_length=1)
+    server_url: HttpUrl = HttpUrl("http://localhost:8080")
+    server_wait_s: float = Field(default=300, gt=0)
 
 
 class LimitsSettings(_Section):
