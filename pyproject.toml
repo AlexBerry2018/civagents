@@ -1,7 +1,7 @@
 [project]
 name = "civ-agents"
 version = "0.1.0"
-description = "Add your description here"
+description = "Мультиагентный правитель Freeciv на локальной LLM"
 readme = "README.md"
 requires-python = ">=3.10,<3.11"
 dependencies = [
@@ -16,9 +16,6 @@ dependencies = [
     "ray>=2.6.3",
     "setuptools<81",
 ]
-
-[project.scripts]
-civ-agents = "civ_agents:main"
 
 [build-system]
 requires = ["uv_build>=0.13.0,<0.14.0"]
